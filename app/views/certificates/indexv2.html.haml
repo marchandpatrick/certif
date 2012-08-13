@@ -1,0 +1,46 @@
+-#  This file is app/views/certificates/index.html.haml
+%h2 All Certificates
+
+= form_tag certificates_path, :method => :get, :id => 'certificateslist_form' do
+  -#
+%table.pretty#certificates
+  %thead
+    %tr
+      %th Version
+      %th Controlling Instance
+      %th SubType
+      %th Profile
+      %th= sortable 'DocumentID', "ID doc"
+      %th= sortable "IssueDate", "Issue Date"
+  %tbody
+    - for certificate in @certificates
+      %tr
+        %td= certificate.Version 
+        %td= certificate.ControllingInstance
+        %td= certificate.SubType
+        %td= certificate.Profile
+        %td= certificate.DocumentID
+        %td= certificate.IssueDate
+        %td= certificate.DocumentFunctionCode
+        %td= certificate.CertificateType
+        %td= certificate.IdentifierAgency
+        # adresse
+        Name1
+        Name2
+        Street1
+        Street2
+        PostalCode
+        City
+        CountryCode
+        CountryName
+        Telephone
+        Telefax
+        Email
+        # logo
+        Logo
+        # image
+        
+
+
+
+

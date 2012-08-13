@@ -1,0 +1,36 @@
+# app/views/certificates/_form.html.erb
+<%= form_for(setup_certificate @certificate) do |f| %>
+  <% if @certificate.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@certificate.errors.count, "error") %> prohibited
+        this certificate from being saved:
+      </h2>
+      <ul>
+      <% @certificate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :Version %>
+    <%= f.text_field :Version %>
+    <%= f.label :ControllingInstance %>
+    <%= f.text_field :ControllingInstance %>  
+  </div>
+
+  <%= f.fields_for :address do |ff| %>
+    <div>
+      <%= ff.label :city %>
+      <%= ff.text_field :city %>
+      <%= ff.label :postalcode %>
+      <%= ff.text_field :postalcode %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

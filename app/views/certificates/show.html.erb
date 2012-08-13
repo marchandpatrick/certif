@@ -1,0 +1,13 @@
+<h1>Show certificate</h1>
+<p>
+  <b>Entete certificat:</b>
+  <%=h @certificate.Version %>
+  <%=h @certificate.Profile %>
+  <br />
+  <b>Adresse:</b>
+  <%= h @certificate.address.try(:city) %>
+</p>
+
+
+<%= link_to 'Edit', edit_certificate_path(@certificate) %> |
+<%= link_to 'Back', certificates_path %>
