@@ -5,9 +5,10 @@
   <%=h @certificate.Profile %>
   <br />
   <b>Adresse:</b>
-  <%= h @certificate.address.try(:city) %>
+  <%= h @certificate.address.city %>
+  <%#= binding.pry %>
 </p>
 
 
-<%= link_to 'Edit', edit_certificate_path(@certificate) %> |
+<%= link_to 'Edit', edit_certificate_path %> |
 <%= link_to 'Back', certificates_path %>

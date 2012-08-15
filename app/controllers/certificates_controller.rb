@@ -29,6 +29,7 @@ class CertificatesController < ApplicationController
   def show
     @certificate = Certificate.find(params[:id])
     #redirect_to (certificates_url)
+    binding.pry
   end
 def destroy
     @certificate = Certificate.find(params[:id])

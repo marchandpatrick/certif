@@ -73,6 +73,11 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
+    rack-webconsole-pry (0.1.8)
+      json
+      multi_json (>= 1.0.3)
+      pry
+      rack
     rails (3.2.6)
       actionmailer (= 3.2.6)
       actionpack (= 3.2.6)
@@ -131,6 +136,7 @@ DEPENDENCIES
   haml
   jquery-rails
   pry
+  rack-webconsole-pry
   rails (= 3.2.6)
   ruby-debug19
   sass-rails (~> 3.2.3)

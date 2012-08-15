@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'dynamic_form'
 gem 'ruby-debug19'
 gem 'pry', :group => :development
-
+gem 'rack-webconsole-pry', :require => 'rack-webconsole'
 
 # Gems used only for assets and not required
 # in production environments by default.
