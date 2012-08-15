@@ -1,3 +1,8 @@
+== Certif application
+faisability application demonstrator to manage xml material certificates
+
+P Marchand Oct 2012
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create

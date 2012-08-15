@@ -10,6 +10,10 @@ gem 'dynamic_form'
 gem 'ruby-debug19'
 gem 'pry', :group => :development
 gem 'rack-webconsole-pry', :require => 'rack-webconsole'
+gem "capybara"
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
